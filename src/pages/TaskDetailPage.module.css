@@ -6,19 +6,20 @@
 .inner {
   max-width: 680px;
   margin: 0 auto;
-  padding: 32px 24px;
+  padding: 36px 28px;
 }
 
 .backLink {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--text-muted);
   text-decoration: none;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   transition: color var(--transition);
+  letter-spacing: 0.01em;
 }
 
 .backLink:hover {
@@ -27,18 +28,19 @@
 
 .card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  animation: fadeIn 250ms ease;
+  animation: fadeIn 260ms var(--ease-out);
+  box-shadow: var(--shadow-md);
 }
 
 .cardHeader {
-  padding: 20px 24px 18px;
+  padding: 24px 26px 20px;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 16px;
 }
 
 .headerMain {
@@ -47,13 +49,14 @@
 }
 
 .taskTitle {
-  font-size: 18px;
+  font-family: var(--font-display);
+  font-size: 20px;
   font-weight: 700;
   color: var(--text);
-  letter-spacing: -0.3px;
+  letter-spacing: -0.4px;
   line-height: 1.35;
   word-break: break-word;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .taskTitleDone {
@@ -64,7 +67,7 @@
 .badgeRow {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   flex-wrap: wrap;
 }
 
@@ -72,42 +75,43 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 2px 9px;
+  padding: 3px 10px;
   border-radius: var(--radius-full);
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .badgePending {
-  background: var(--warning-light);
-  color: var(--warning-dark);
+  background: rgba(212, 168, 67, 0.12);
+  color: #c49b38;
 }
 
 .badgeDone {
   background: var(--success-light);
-  color: var(--success-dark);
+  color: var(--success);
 }
 
 .badgePriorityAlta {
   background: var(--danger-light);
-  color: #991b1b;
+  color: var(--danger);
 }
 
 .badgePriorityMedia {
-  background: var(--warning-light);
-  color: var(--warning-dark);
+  background: rgba(212, 168, 67, 0.12);
+  color: #c49b38;
 }
 
 .badgePriorityBaixa {
-  background: var(--accent-light);
-  color: var(--accent-text);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
 }
 
 .toggleBtn {
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding: 7px 14px;
+  gap: 6px;
+  padding: 8px 16px;
   border-radius: var(--radius);
   font-size: 13px;
   font-weight: 600;
@@ -116,55 +120,58 @@
   transition: all var(--transition);
   flex-shrink: 0;
   white-space: nowrap;
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
 }
 
 .toggleBtnPending {
-  color: var(--success-dark);
-  border-color: var(--success);
+  color: var(--success);
+  border-color: rgba(79, 168, 110, 0.4);
   background: var(--success-light);
 }
 
 .toggleBtnPending:hover {
   background: var(--success);
-  color: #ffffff;
+  color: var(--bg);
+  border-color: var(--success);
 }
 
 .toggleBtnDone {
   color: var(--text-muted);
-  border-color: var(--border);
-  background: var(--bg);
+  border-color: var(--border-strong);
+  background: transparent;
 }
 
 .toggleBtnDone:hover {
-  background: var(--border);
+  background: rgba(255, 255, 255, 0.05);
   color: var(--text);
 }
 
 .cardBody {
-  padding: 20px 24px;
+  padding: 22px 26px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .section {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 }
 
 .sectionLabel {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--text-light);
 }
 
 .sectionValue {
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .sectionValueEmpty {
@@ -178,7 +185,7 @@
 }
 
 .cardFooter {
-  padding: 16px 24px;
+  padding: 18px 26px;
   border-top: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -195,26 +202,30 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 8px 16px;
+  padding: 9px 18px;
   background: var(--accent);
-  color: #ffffff;
+  color: #0e0d0c;
   border: none;
   border-radius: var(--radius);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: background var(--transition);
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
 }
 
 .editToggleBtn:hover {
   background: var(--accent-hover);
+  box-shadow: 0 4px 14px rgba(212, 168, 67, 0.28);
+  transform: translateY(-1px);
 }
 
 .deleteBtn {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 8px 16px;
+  padding: 9px 18px;
   background: var(--danger-light);
   color: var(--danger);
   border: 1px solid var(--danger-border);
@@ -226,45 +237,47 @@
 }
 
 .deleteBtn:hover {
-  background: #fee2e2;
+  background: rgba(224, 85, 85, 0.18);
   border-color: var(--danger);
 }
 
 .notFound {
   text-align: center;
-  padding: 72px 24px;
+  padding: 80px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  animation: fadeIn 250ms ease;
+  gap: 12px;
+  animation: fadeIn 260ms var(--ease-out);
 }
 
 .notFoundIcon {
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   border-radius: var(--radius-full);
-  background: var(--bg);
+  background: var(--surface);
+  border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-light);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .notFoundTitle {
-  font-size: 17px;
+  font-family: var(--font-display);
+  font-size: 18px;
   font-weight: 600;
   color: var(--text-muted);
 }
 
 .notFoundText {
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--text-light);
 }
 
 .editFormWrapper {
-  animation: slideDown 180ms ease;
+  animation: slideDown 200ms var(--ease-out);
 }
 
 .editFormWrapper > * {
@@ -276,7 +289,7 @@
 
 @media (max-width: 480px) {
   .inner {
-    padding: 20px 16px;
+    padding: 20px 18px;
   }
 
   .cardHeader {

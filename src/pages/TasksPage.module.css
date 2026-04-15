@@ -6,12 +6,12 @@
 .inner {
   max-width: 860px;
   margin: 0 auto;
-  padding: 32px 24px;
+  padding: 36px 28px;
 }
 
 .header {
-  margin-bottom: 24px;
-  animation: fadeIn 250ms ease;
+  margin-bottom: 28px;
+  animation: fadeIn 260ms var(--ease-out);
 }
 
 .headerTop {
@@ -23,10 +23,12 @@
 }
 
 .title {
-  font-size: 22px;
+  font-family: var(--font-display);
+  font-size: 24px;
   font-weight: 700;
   color: var(--text);
-  letter-spacing: -0.4px;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
 }
 
 .subtitle {
@@ -37,58 +39,66 @@
 .addBtn {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
+  gap: 7px;
+  padding: 9px 18px;
   background: var(--accent);
-  color: #ffffff;
+  color: #0e0d0c;
   border: none;
   border-radius: var(--radius);
   font-size: 13.5px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: background var(--transition);
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
   white-space: nowrap;
   flex-shrink: 0;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .addBtn:hover {
   background: var(--accent-hover);
+  box-shadow: 0 4px 14px rgba(212, 168, 67, 0.28);
+  transform: translateY(-1px);
+}
+
+.addBtn:active {
+  transform: translateY(0);
 }
 
 .formWrapper {
-  margin-bottom: 20px;
-  animation: slideDown 200ms ease;
+  margin-bottom: 22px;
+  animation: slideDown 200ms var(--ease-out);
 }
 
 .listSection {
-  animation: fadeIn 350ms ease;
+  animation: fadeIn 360ms var(--ease-out);
 }
 
 .errorAlert {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 14px;
+  padding: 11px 14px;
   background: var(--danger-light);
   border: 1px solid var(--danger-border);
   border-radius: var(--radius);
   font-size: 13px;
-  color: #991b1b;
-  margin-bottom: 14px;
+  color: #f08080;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 480px) {
   .inner {
-    padding: 24px 16px;
+    padding: 24px 18px;
   }
 
   .title {
-    font-size: 19px;
+    font-size: 20px;
   }
 
   .headerTop {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
   .addBtn {
