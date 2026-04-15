@@ -1,0 +1,70 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, var(--bg) 25%, var(--border) 37%, var(--bg) 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+  border-radius: var(--radius-sm);
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  margin-top: 2px;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.titleBar {
+  height: 15px;
+  width: 55%;
+}
+
+.descBar {
+  height: 12px;
+  width: 80%;
+}
+
+.descBarShort {
+  height: 12px;
+  width: 40%;
+}
+
+.metaRow {
+  display: flex;
+  gap: 6px;
+  margin-top: 3px;
+}
+
+.badge {
+  height: 17px;
+  width: 60px;
+  border-radius: var(--radius-full);
+}
+
+.badgeSmall {
+  height: 17px;
+  width: 44px;
+  border-radius: var(--radius-full);
+}

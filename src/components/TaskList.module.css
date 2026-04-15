@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--surface);
+  padding: 3px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.filterBtn {
+  padding: 5px 11px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+
+.filterBtn:hover {
+  color: var(--text);
+}
+
+.filterBtnActive {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.filterBtnActive:hover {
+  color: #ffffff;
+}
+
+.sortSelect {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--surface);
+  cursor: pointer;
+  font-family: var(--font);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.sortSelect:focus {
+  border-color: var(--accent);
+}
+
+.count {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 24px;
+  text-align: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+}
+
+.emptyIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+}
+
+.emptyTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.emptySubtitle {
+  font-size: 13.5px;
+  color: var(--text-light);
+  max-width: 250px;
+}

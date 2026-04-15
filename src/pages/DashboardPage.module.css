@@ -1,0 +1,239 @@
+.page {
+  min-height: calc(100vh - var(--navbar-h));
+  background: var(--bg);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.welcome {
+  margin-bottom: 28px;
+  animation: fadeIn 250ms ease;
+}
+
+.welcomeTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.4px;
+  margin-bottom: 4px;
+}
+
+.welcomeSubtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+  animation: fadeIn 300ms ease;
+}
+
+.statCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.statIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statIconTotal {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.statIconActive {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.statIconDone {
+  background: var(--success-light);
+  color: var(--success-dark);
+}
+
+.statInfo {
+  flex: 1;
+}
+
+.statValue {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.statLabel {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.progressSection {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 28px;
+  animation: fadeIn 350ms ease;
+}
+
+.progressHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.progressTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.progressPercent {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.progressTrack {
+  height: 6px;
+  background: var(--bg);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: var(--radius-full);
+  transition: width 500ms ease;
+}
+
+.progressBarDone {
+  background: var(--success);
+}
+
+.section {
+  animation: fadeIn 400ms ease;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.viewAllLink {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.viewAllLink:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.emptyDashboard {
+  text-align: center;
+  padding: 44px 24px;
+  background: var(--surface);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+}
+
+.emptyDashboardIcon {
+  width: 48px;
+  height: 48px;
+  background: var(--accent-light);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  color: var(--accent);
+}
+
+.emptyDashboardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.emptyDashboardText {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.ctaBtn:hover {
+  background: var(--accent-hover);
+}
+
+@media (max-width: 640px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcomeTitle {
+    font-size: 19px;
+  }
+
+  .inner {
+    padding: 24px 16px;
+  }
+}
