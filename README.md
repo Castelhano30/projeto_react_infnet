@@ -1,16 +1,139 @@
-# React + Vite
+# 📘 Projeto React - Infnet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![React](https://img.shields.io/badge/react-19-blue)
+![Vite](https://img.shields.io/badge/vite-fast-purple)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-Currently, two official plugins are available:
+## 📖 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este projeto foi desenvolvido como parte da pós-graduação na **Infnet**, com o objetivo de aplicar na prática conceitos fundamentais do desenvolvimento front-end utilizando **React**.
 
-## React Compiler
+A aplicação simula um sistema web com navegação entre páginas, manipulação de estado e interação com o usuário, seguindo boas práticas de desenvolvimento moderno.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ React  
+- ⚡ Vite  
+- 🎨 Bootstrap / Reactstrap  
+- 🧠 JavaScript (ES6+)  
+- 🌐 HTML5 & CSS3  
+
+---
+
+## 🎯 Objetivos do Projeto
+
+- Aplicar conceitos de **componentização**  
+- Trabalhar com **estado (useState / useEffect)**  
+- Implementar **roteamento entre páginas**  
+- Criar **interfaces reutilizáveis**  
+- Simular comportamento de aplicações reais  
+
+---
+
+## ⚙️ Funcionalidades
+
+- ✅ Navegação entre páginas  
+- ✅ Componentes reutilizáveis  
+- ✅ Manipulação de estado  
+- ✅ Interface responsiva  
+- 🔄 Possível integração com API (futuro)  
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+projeto_react_infnet/
+│
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## 🛠️ Como Rodar o Projeto
+
+### 🔽 Clone o repositório
+
+```bash
+git clone https://github.com/Castelhano30/projeto_react_infnet.git
+```
+
+### 📂 Acesse a pasta
+
+```bash
+cd projeto_react_infnet
+```
+
+### 📦 Instale as dependências
+
+```bash
+npm install
+```
+
+### ▶️ Execute o projeto
+
+```bash
+npm run dev
+```
+
+O projeto estará disponível em:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📸 Preview
+
+*(Adicione prints aqui futuramente para enriquecer o projeto)*
+
+---
+
+## 🧠 Aprendizados
+
+Durante o desenvolvimento deste projeto, foram reforçados conceitos importantes como:
+
+- Organização de código em React  
+- Separação de responsabilidades  
+- Uso de hooks  
+- Estruturação de aplicações modernas com Vite  
+
+---
+
+## 🚀 Melhorias Futuras
+
+- 🔐 Implementar autenticação de usuários  
+- 🌐 Integração com API real  
+- 💾 Persistência de dados  
+- 📱 Melhorar responsividade mobile  
+- 🎯 Testes automatizados  
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Felipe Castelhano**
+
+- 💼 Desenvolvedor FullStack  
+- 🔗 GitHub: https://github.com/Castelhano30  
+- 🔗 LinkedIn: https://www.linkedin.com/in/felipe-castelhano30  
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
+
