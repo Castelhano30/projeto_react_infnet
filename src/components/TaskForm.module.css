@@ -1,37 +1,41 @@
 .form {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: 24px;
 }
 
 .title {
+  font-family: var(--font-display);
   font-size: 15px;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  letter-spacing: -0.2px;
 }
 
 .grid {
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 
 .gridTwo {
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 16px;
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
 }
 
 .label {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .required {
@@ -43,21 +47,22 @@
 .textarea,
 .select {
   width: 100%;
-  padding: 9px 12px;
-  border: 1px solid var(--border);
+  padding: 10px 13px;
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius);
   font-size: 13.5px;
   color: var(--text);
-  background: var(--surface);
-  transition: border-color var(--transition), box-shadow var(--transition);
+  background: var(--surface-alt);
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
   font-family: var(--font);
 }
 
 .input:focus,
 .textarea:focus,
 .select:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  border-color: rgba(212, 168, 67, 0.6);
+  box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.08);
+  background: var(--surface-high);
 }
 
 .input::placeholder,
@@ -65,18 +70,32 @@
   color: var(--text-light);
 }
 
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23504c49' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.select option {
+  background: var(--surface);
+  color: var(--text);
+}
+
 .textarea {
   resize: vertical;
-  min-height: 80px;
-  line-height: 1.5;
+  min-height: 84px;
+  line-height: 1.55;
 }
 
 .inputError {
-  border-color: var(--danger);
+  border-color: rgba(224, 85, 85, 0.5);
 }
 
 .inputError:focus {
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  box-shadow: 0 0 0 3px rgba(224, 85, 85, 0.1);
 }
 
 .errorMsg {
@@ -87,7 +106,7 @@
 .footer {
   display: flex;
   gap: 8px;
-  margin-top: 16px;
+  margin-top: 18px;
   justify-content: flex-end;
 }
 
@@ -95,41 +114,52 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 9px 18px;
+  padding: 10px 20px;
   background: var(--accent);
-  color: #ffffff;
+  color: #0e0d0c;
   border: none;
   border-radius: var(--radius);
   font-size: 13.5px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: background var(--transition);
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .btnSubmit:hover {
   background: var(--accent-hover);
+  box-shadow: 0 4px 14px rgba(212, 168, 67, 0.28);
+  transform: translateY(-1px);
+}
+
+.btnSubmit:active {
+  transform: translateY(0);
 }
 
 .btnSubmit:disabled {
-  opacity: 0.6;
+  opacity: 0.55;
   cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .btnCancel {
-  padding: 9px 18px;
-  background: var(--surface);
+  padding: 10px 18px;
+  background: transparent;
   color: var(--text-muted);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius);
   font-size: 13.5px;
   font-weight: 500;
   cursor: pointer;
-  transition: background var(--transition), border-color var(--transition);
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
 }
 
 .btnCancel:hover {
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.05);
   border-color: var(--border-strong);
+  color: var(--text);
 }
 
 @media (max-width: 480px) {

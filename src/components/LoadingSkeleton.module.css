@@ -8,16 +8,21 @@
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 14px 16px;
+  padding: 16px 18px;
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 14px;
 }
 
 .shimmer {
-  background: linear-gradient(90deg, var(--bg) 25%, var(--border) 37%, var(--bg) 63%);
+  background: linear-gradient(
+    90deg,
+    var(--surface-alt) 25%,
+    rgba(255, 255, 255, 0.04) 37%,
+    var(--surface-alt) 63%
+  );
   background-size: 400% 100%;
-  animation: shimmer 1.4s ease infinite;
+  animation: shimmer 1.6s ease infinite;
   border-radius: var(--radius-sm);
 }
 
@@ -25,46 +30,46 @@
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  border-radius: var(--radius-sm);
-  margin-top: 2px;
+  border-radius: 5px;
+  margin-top: 3px;
 }
 
 .body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 8px;
 }
 
 .titleBar {
-  height: 15px;
-  width: 55%;
+  height: 14px;
+  width: 52%;
 }
 
 .descBar {
   height: 12px;
-  width: 80%;
+  width: 78%;
 }
 
 .descBarShort {
   height: 12px;
-  width: 40%;
+  width: 38%;
 }
 
 .metaRow {
   display: flex;
-  gap: 6px;
-  margin-top: 3px;
+  gap: 7px;
+  margin-top: 4px;
 }
 
 .badge {
-  height: 17px;
-  width: 60px;
+  height: 18px;
+  width: 62px;
   border-radius: var(--radius-full);
 }
 
 .badgeSmall {
-  height: 17px;
-  width: 44px;
+  height: 18px;
+  width: 46px;
   border-radius: var(--radius-full);
 }

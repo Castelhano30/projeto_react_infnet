@@ -6,20 +6,24 @@
 .inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 32px 24px;
+  padding: 36px 28px;
 }
 
+/* ── Welcome ─────────────────────────────────────────────── */
+
 .welcome {
-  margin-bottom: 28px;
-  animation: fadeIn 250ms ease;
+  margin-bottom: 32px;
+  animation: fadeIn 280ms var(--ease-out);
 }
 
 .welcomeTitle {
-  font-size: 22px;
+  font-family: var(--font-display);
+  font-size: 26px;
   font-weight: 700;
   color: var(--text);
-  letter-spacing: -0.4px;
-  margin-bottom: 4px;
+  letter-spacing: -0.6px;
+  margin-bottom: 5px;
+  line-height: 1.2;
 }
 
 .welcomeSubtitle {
@@ -31,27 +35,48 @@
   color: var(--accent);
 }
 
+/* ── Stats ───────────────────────────────────────────────── */
+
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-bottom: 28px;
-  animation: fadeIn 300ms ease;
+  gap: 16px;
+  margin-bottom: 32px;
+  animation: fadeIn 320ms var(--ease-out);
 }
 
 .statCard {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 18px 20px;
+  padding: 22px 24px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.statCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.statCard:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow);
 }
 
 .statIcon {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius);
   display: flex;
   align-items: center;
@@ -60,18 +85,18 @@
 }
 
 .statIconTotal {
-  background: var(--accent-light);
+  background: var(--accent-dim);
   color: var(--accent);
 }
 
 .statIconActive {
-  background: var(--warning-light);
+  background: rgba(212, 168, 67, 0.1);
   color: var(--warning);
 }
 
 .statIconDone {
   background: var(--success-light);
-  color: var(--success-dark);
+  color: var(--success);
 }
 
 .statInfo {
@@ -79,80 +104,95 @@
 }
 
 .statValue {
-  font-size: 26px;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
   color: var(--text);
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
   line-height: 1;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .statLabel {
   font-size: 12.5px;
   color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
+
+/* ── Progress ────────────────────────────────────────────── */
 
 .progressSection {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 20px;
-  margin-bottom: 28px;
-  animation: fadeIn 350ms ease;
+  padding: 22px 24px;
+  margin-bottom: 32px;
+  animation: fadeIn 360ms var(--ease-out);
 }
 
 .progressHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .progressTitle {
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
-  color: var(--text);
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 11.5px;
 }
 
 .progressPercent {
-  font-size: 13px;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
   color: var(--accent);
 }
 
 .progressTrack {
-  height: 6px;
-  background: var(--bg);
+  height: 5px;
+  background: var(--surface-alt);
   border-radius: var(--radius-full);
   overflow: hidden;
 }
 
 .progressBar {
   height: 100%;
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent-hover), var(--accent));
   border-radius: var(--radius-full);
-  transition: width 500ms ease;
+  transition: width 600ms var(--ease-out);
+  box-shadow: 0 0 8px rgba(212, 168, 67, 0.4);
 }
 
 .progressBarDone {
-  background: var(--success);
+  background: linear-gradient(90deg, var(--success-dark), var(--success));
+  box-shadow: 0 0 8px rgba(79, 168, 110, 0.4);
 }
 
+/* ── Section ─────────────────────────────────────────────── */
+
 .section {
-  animation: fadeIn 400ms ease;
+  animation: fadeIn 400ms var(--ease-out);
 }
 
 .sectionHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .sectionTitle {
+  font-family: var(--font-display);
   font-size: 15px;
   font-weight: 600;
   color: var(--text);
+  letter-spacing: -0.2px;
 }
 
 .viewAllLink {
@@ -160,80 +200,92 @@
   font-weight: 500;
   color: var(--accent);
   text-decoration: none;
-  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity var(--transition);
+  opacity: 0.8;
 }
 
 .viewAllLink:hover {
-  color: var(--accent-hover);
-  text-decoration: underline;
+  opacity: 1;
 }
+
+/* ── Empty ───────────────────────────────────────────────── */
 
 .emptyDashboard {
   text-align: center;
-  padding: 44px 24px;
+  padding: 52px 24px;
   background: var(--surface);
   border: 1px dashed var(--border-strong);
   border-radius: var(--radius-lg);
 }
 
 .emptyDashboardIcon {
-  width: 48px;
-  height: 48px;
-  background: var(--accent-light);
+  width: 52px;
+  height: 52px;
+  background: var(--accent-dim);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 14px;
+  margin: 0 auto 16px;
   color: var(--accent);
 }
 
 .emptyDashboardTitle {
-  font-size: 16px;
+  font-family: var(--font-display);
+  font-size: 17px;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .emptyDashboardText {
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--text-muted);
-  margin-bottom: 18px;
-  max-width: 280px;
+  margin-bottom: 22px;
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.6;
 }
 
 .ctaBtn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 9px 18px;
+  padding: 10px 20px;
   background: var(--accent);
-  color: #ffffff;
+  color: #0e0d0c;
   border: none;
   border-radius: var(--radius);
   font-size: 13.5px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   text-decoration: none;
-  transition: background var(--transition);
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .ctaBtn:hover {
   background: var(--accent-hover);
+  box-shadow: 0 4px 16px rgba(212, 168, 67, 0.3);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 640px) {
   .statsGrid {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .welcomeTitle {
-    font-size: 19px;
+    font-size: 22px;
   }
 
   .inner {
-    padding: 24px 16px;
+    padding: 24px 18px;
   }
 }

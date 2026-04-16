@@ -3,7 +3,9 @@
   top: 0;
   z-index: 200;
   height: var(--navbar-h);
-  background: var(--surface);
+  background: rgba(14, 13, 12, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -13,7 +15,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 28px;
   display: flex;
   align-items: center;
   gap: 0;
@@ -22,26 +24,28 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   text-decoration: none;
-  margin-right: 36px;
+  margin-right: 40px;
   flex-shrink: 0;
 }
 
 .brandMark {
-  font-size: 17px;
+  font-family: var(--font-display);
+  font-size: 16px;
   font-weight: 700;
   color: var(--text);
-  letter-spacing: -0.4px;
+  letter-spacing: -0.3px;
   line-height: 1;
 }
 
 .brandDot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   background: var(--accent);
   border-radius: 50%;
   flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(212, 168, 67, 0.6);
 }
 
 .nav {
@@ -52,34 +56,36 @@
 }
 
 .navLink {
-  padding: 6px 12px;
+  padding: 6px 14px;
+  font-family: var(--font);
   font-size: 13.5px;
   font-weight: 500;
   color: var(--text-muted);
   text-decoration: none;
   border-radius: var(--radius);
+  letter-spacing: 0.01em;
   transition: color var(--transition), background var(--transition);
 }
 
 .navLink:hover {
   color: var(--text);
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .navLinkActive {
   color: var(--accent);
-  background: var(--accent-light);
+  background: var(--accent-dim);
 }
 
 .navLinkActive:hover {
   color: var(--accent);
-  background: var(--accent-light);
+  background: var(--accent-dim);
 }
 
 .right {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   margin-left: auto;
 }
 
@@ -97,7 +103,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px;
+  padding: 6px 14px;
   background: transparent;
   border: 1px solid var(--border-strong);
   border-radius: var(--radius);
@@ -141,7 +147,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  animation: popDown 150ms var(--ease-out);
+  animation: popDown 160ms var(--ease-out);
   box-shadow: var(--shadow-md);
 }
 
@@ -155,7 +161,7 @@
 }
 
 .mobileNavLink {
-  padding: 8px 10px;
+  padding: 9px 12px;
   font-size: 14px;
   font-weight: 500;
   color: var(--text-muted);
@@ -167,7 +173,7 @@
 .mobileNavLink:hover,
 .mobileNavLinkActive {
   color: var(--accent);
-  background: var(--accent-light);
+  background: var(--accent-dim);
 }
 
 @media (max-width: 640px) {

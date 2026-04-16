@@ -5,30 +5,31 @@
   border-radius: var(--radius-lg);
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 14px 16px;
+  gap: 14px;
+  padding: 16px 18px;
   cursor: pointer;
-  transition: border-color var(--transition), box-shadow var(--transition);
-  animation: slideInLeft 220ms var(--ease-out) both;
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+  animation: slideInLeft 240ms var(--ease-out) both;
   animation-delay: calc(var(--i, 0) * 40ms);
 }
 
 .card:hover {
   border-color: var(--border-strong);
+  background: var(--surface-alt);
   box-shadow: var(--shadow);
 }
 
 .cardCompleted {
-  background: var(--surface-alt);
+  opacity: 0.65;
+}
+
+.cardCompleted:hover {
+  opacity: 0.8;
 }
 
 .cardExiting {
-  animation: slideOutRight 280ms var(--ease-out) forwards !important;
+  animation: slideOutRight 300ms var(--ease-out) forwards !important;
   pointer-events: none;
-}
-
-.cardFlash {
-  border-color: var(--danger) !important;
 }
 
 .checkbox {
@@ -36,33 +37,35 @@
   width: 20px;
   height: 20px;
   border: 1.5px solid var(--border-strong);
-  border-radius: var(--radius-sm);
+  border-radius: 5px;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-top: 2px;
-  transition: border-color var(--transition), background var(--transition);
+  margin-top: 3px;
+  transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
 }
 
 .checkbox:hover {
   border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.08);
 }
 
 .checkboxDone {
-  border-color: var(--success-dark);
-  background: var(--success-dark);
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(212, 168, 67, 0.3);
 }
 
 .checkboxDone:hover {
-  border-color: var(--success-dark);
-  background: var(--success-dark);
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
 }
 
 .checkIcon {
-  color: #ffffff;
-  animation: checkBounce 200ms var(--ease-out) both;
+  color: #0e0d0c;
+  animation: checkBounce 240ms var(--ease-out) both;
 }
 
 .body {
@@ -74,14 +77,14 @@
   position: relative;
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .titleText {
   font-size: 14.5px;
   font-weight: 500;
   color: var(--text);
-  line-height: 1.45;
+  line-height: 1.5;
   word-break: break-word;
   display: block;
   transition: color var(--transition);
@@ -99,7 +102,7 @@
   height: 1.5px;
   background: var(--text-light);
   transform-origin: left;
-  animation: strike 300ms var(--ease-out) both;
+  animation: strike 320ms var(--ease-out) both;
 }
 
 .editInput {
@@ -111,15 +114,15 @@
   border-bottom: 1.5px solid var(--accent);
   outline: none;
   width: 100%;
-  padding: 1px 0;
+  padding: 2px 0;
   font-family: var(--font);
 }
 
 .desc {
   font-size: 13px;
   color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: 8px;
+  line-height: 1.55;
+  margin-bottom: 9px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -135,34 +138,35 @@
 
 .badge {
   font-size: 11px;
-  font-weight: 500;
-  padding: 2px 8px;
+  font-weight: 600;
+  padding: 2px 9px;
   border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
 }
 
 .badgePending {
-  color: var(--warning-dark);
-  background: var(--warning-light);
+  color: #c49b38;
+  background: rgba(212, 168, 67, 0.12);
 }
 
 .badgeDone {
-  color: var(--success-dark);
+  color: var(--success);
   background: var(--success-light);
 }
 
 .badgeAlta {
-  color: #991b1b;
+  color: var(--danger);
   background: var(--danger-light);
 }
 
 .badgeMedia {
-  color: var(--warning-dark);
-  background: var(--warning-light);
+  color: #c49b38;
+  background: rgba(212, 168, 67, 0.12);
 }
 
 .badgeBaixa {
   color: var(--text-muted);
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .date {
@@ -174,27 +178,27 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
   flex-shrink: 0;
 }
 
 .iconBtn {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-light);
   background: none;
   border: none;
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: color var(--transition), background var(--transition);
 }
 
 .iconBtn:hover {
   color: var(--text-muted);
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .iconBtnDel:hover {

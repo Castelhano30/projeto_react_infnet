@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .controls {
@@ -9,7 +9,7 @@
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .filterGroup {
@@ -23,7 +23,7 @@
 }
 
 .filterBtn {
-  padding: 5px 11px;
+  padding: 5px 14px;
   border-radius: var(--radius-sm);
   font-size: 13px;
   font-weight: 500;
@@ -37,19 +37,22 @@
 
 .filterBtn:hover {
   color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .filterBtnActive {
   background: var(--accent);
-  color: #ffffff;
+  color: #0e0d0c;
+  font-weight: 700;
 }
 
 .filterBtnActive:hover {
-  color: #ffffff;
+  background: var(--accent-hover);
+  color: #0e0d0c;
 }
 
 .sortSelect {
-  padding: 6px 10px;
+  padding: 7px 12px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   font-size: 13px;
@@ -59,10 +62,20 @@
   font-family: var(--font);
   outline: none;
   transition: border-color var(--transition);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23504c49' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
 }
 
 .sortSelect:focus {
-  border-color: var(--accent);
+  border-color: rgba(212, 168, 67, 0.4);
+}
+
+.sortSelect option {
+  background: var(--surface);
+  color: var(--text);
 }
 
 .count {
@@ -70,6 +83,7 @@
   color: var(--text-light);
   margin-left: auto;
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .list {
@@ -83,19 +97,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 56px 24px;
+  padding: 60px 24px;
   text-align: center;
-  gap: 10px;
+  gap: 12px;
   background: var(--surface);
   border: 1px dashed var(--border-strong);
   border-radius: var(--radius-lg);
 }
 
 .emptyIcon {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: var(--radius-full);
-  background: var(--bg);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,6 +118,7 @@
 }
 
 .emptyTitle {
+  font-family: var(--font-display);
   font-size: 15px;
   font-weight: 600;
   color: var(--text-muted);
@@ -111,5 +127,6 @@
 .emptySubtitle {
   font-size: 13.5px;
   color: var(--text-light);
-  max-width: 250px;
+  max-width: 260px;
+  line-height: 1.6;
 }
