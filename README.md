@@ -99,7 +99,7 @@ http://localhost:5173
 ## 📸 Preview
 
 <img width="471" height="557" alt="image" src="https://github.com/user-attachments/assets/ded5d218-e930-4fba-b72c-ccb9863b0a0b" />
-<img width="1175" height="727" alt="image" src="https://github.com/user-attachments/assets/8ee18fc1-59ed-4642-9687-19c02efccccb" />
+<img width="1148" height="601" alt="image" src="https://github.com/user-attachments/assets/f99577b6-482a-46c3-bbd4-628f88dd6ead" />
 
 
 
