@@ -98,8 +98,9 @@ http://localhost:5173
 
 ## 📸 Preview
 
-<img width="511" height="586" alt="image" src="https://github.com/user-attachments/assets/1656d5b9-55da-4456-9475-1ebfd006038c" />
-<img width="1169" height="623" alt="image" src="https://github.com/user-attachments/assets/cca915a3-f08a-4bb7-96ad-7e61ba856b49" />
+<img width="471" height="557" alt="image" src="https://github.com/user-attachments/assets/ded5d218-e930-4fba-b72c-ccb9863b0a0b" />
+<img width="1175" height="727" alt="image" src="https://github.com/user-attachments/assets/8ee18fc1-59ed-4642-9687-19c02efccccb" />
+
 
 
 
